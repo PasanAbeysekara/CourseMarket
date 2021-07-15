@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="flex flex-wrap ml-10 mt-10">
+        {# courses #}
+        {% for course in courses %}
+            {# course #}
+            <div class="text-center w-3/12 h-60 bg-gray-200 duration-200 rounded-lg m-3 mx-9 shadow-md border-gray-600  hover:bg-gray-300">
+                <p>{{ course.name }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

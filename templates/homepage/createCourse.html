@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="mt-20">
+        <form action="{% url 'homepage:createCourse' %}" method="post" class="grid justify-items-center">
+            {% csrf_token %}
+            <div class="flex w-96 ml-28">
+                <p class="font-bold text-gray-600">Name</p>
+                <div class="ml-10" >{{ form.name }}</div>
+            </div>
+            <div class="flex w-96 mt-10 ml-28">
+                <p class="font-bold text-gray-600">Category</p>
+                <div class="ml-5">{{ form.category }}</div>
+            </div>
+            <button type="submit" class="mt-10 bg-red-600 border-2 border-gray-400 w-20 text-gray-100 rounded-full hover:bg-red-700 hover:shadow-md">Create</button>
+        </form>
+    </div>
+{% endblock %}
